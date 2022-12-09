@@ -1,16 +1,9 @@
 
-
-// document.getElementById("increase").addEventListener('click',function(){
-//     ;
-// });
-// document.getElementById("decrease").addEventListener('click',function(){
-//     increaseDecrease(false);
-// });
-
 function increaseDecrease(ticket, isincrease){
 
     const input = document.getElementById(ticket +'-input');
     const count = parseInt(input.value);
+    
     let newCount = 0;
     if( isincrease == true){
         newCount = count + 1;
@@ -23,12 +16,8 @@ function increaseDecrease(ticket, isincrease){
 };
 
 function ticketPrice(){
-    const input = document.getElementById('first-input');
-    const count = parseInt(input.value);
-    const input2 = document.getElementById('eco-input');
-    const count2 = parseInt(input2.value); 
 
-    let subtotal = (count * 150) + (count2 * 100);   
+    let subtotal = getInput('first') * 150 + getInput('eco') * 100;
     document.getElementById('subtotal').innerText = '$' + subtotal;
 
     let tax = subtotal * 0.1;
@@ -36,13 +25,36 @@ function ticketPrice(){
 
     let total = subtotal + tax;
     document.getElementById('total').innerText = '$' + total;
+    getInput();
 };
 
-// function getInput (ticket){
-//     const Input = document.getElementById(ticket +'-input');
-//     const Count = parseInt(Input.value);
-//     return Count;
+function getInput(ticket){
+    const Input = document.getElementById(ticket +'-input');
+    const Count = parseInt(Input.value);
+    return Count;
+};
+
+
+// function ticketPrice(){
+//     const input = document.getElementById('first-input');
+//     const count = parseInt(input.value);
+//     const input2 = document.getElementById('eco-input');
+//     const count2 = parseInt(input2.value);
+//     // const count = getInput('first');
+//     // const count2 = getInput('eco');
+
+//     let subtotal = (count * 150) + (count2 * 100);   
+//     // subtotal = getInput('first') * 150 + getInput('eco') * 100;
+//     document.getElementById('subtotal').innerText = '$' + subtotal;
+
+//     let tax = subtotal * 0.1;
+//     document.getElementById('tax').innerText = '$' + tax;
+
+//     let total = subtotal + tax;
+//     document.getElementById('total').innerText = '$' + total;
+//     getInput();
 // };
+
 
 
 // function increaseDecrease2(isincrease){
@@ -57,13 +69,6 @@ function ticketPrice(){
 //         NewCount = Count - 1;
 //     };
 //     Input.value = NewCount;
-
-// };
-
-
-
-// function increaseItem(){
-//     document.getElementById("increase").addEventListener('click',)
 
 // };
 
@@ -85,32 +90,9 @@ function ticketPrice(){
 
 // });
 
-
-// function decrease(){
-
-//     const Input = document.getElementById("input");
-//     const Count = parseInt(Input.value);
-//     let NewCount = Count - 1;
-//     Input.value = NewCount;
-//     // const subtotal = increase() * 150 + decrease() * 100;
-//     // document.getElementById('subtotal').innerText = subtotal;
-
-//     // const tax = subtotal * 0.1;
-//     // document.getElementById('tax').innerText = tax;
-
-//     // const total = subtotal + tax;
-//     // document.getElementById('total').innerText = total;
-
-// };
-
-// function Total(){
-//     const subtotal = increase() * 150 + decrease() * 100;
-//     document.getElementById('subtotal').innerText = subtotal;
-
-//     const tax = subtotal * 0.1;
-//     document.getElementById('tax').innerText = tax;
-
-//     const total = subtotal + tax;
-//     document.getElementById('total').innerText = total;
-
-// };
+// document.getElementById("increase").addEventListener('click',function(){
+//     ;
+// });
+// document.getElementById("decrease").addEventListener('click',function(){
+//     increaseDecrease(false);
+// });
