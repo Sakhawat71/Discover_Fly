@@ -1,46 +1,64 @@
 
 
-document.getElementById("increase").addEventListener('click',function(){
-    increaseDecrease(true);
-});
-document.getElementById("decrease").addEventListener('click',function(){
-    increaseDecrease(false);
-});
-document.getElementById("ecoIncrease").addEventListener('click',function(){
-    increaseDecrease2(true);
-});
-document.getElementById("ecoDecrease").addEventListener('click',function(){
-    increaseDecrease2(false);
-});
+// document.getElementById("increase").addEventListener('click',function(){
+//     ;
+// });
+// document.getElementById("decrease").addEventListener('click',function(){
+//     increaseDecrease(false);
+// });
 
-function increaseDecrease(isincrease){
+function increaseDecrease(ticket, isincrease){
 
-    const Input = document.getElementById("input");
-    const Count = parseInt(Input.value);
-    let NewCount = 0;
+    const input = document.getElementById(ticket +'-input');
+    const count = parseInt(input.value);
+    let newCount = 0;
     if( isincrease == true){
-        NewCount = Count + 1;
+        newCount = count + 1;
     };
-    if (isincrease == false && Count > 0){
-        NewCount = Count - 1;
+    if (isincrease == false && count > 0){
+        newCount = count - 1;
     };
-    Input.value = NewCount;
-
+    input.value = newCount;
+    ticketPrice();
 };
-function increaseDecrease2(isincrease){
 
-    const Input = document.getElementById("ecoInput");
-    const Count = parseInt(Input.value);
-    let NewCount = 0;
-    if( isincrease == true){
-        NewCount = Count + 1;
-    };
-    if (isincrease == false && Count > 0){
-        NewCount = Count - 1;
-    };
-    Input.value = NewCount;
+function ticketPrice(){
+    const input = document.getElementById('first-input');
+    const count = parseInt(input.value);
+    const input2 = document.getElementById('eco-input');
+    const count2 = parseInt(input2.value); 
 
+    let subtotal = (count * 150) + (count2 * 100);   
+    document.getElementById('subtotal').innerText = '$' + subtotal;
+
+    let tax = subtotal * 0.1;
+    document.getElementById('tax').innerText = '$' + tax;
+
+    let total = subtotal + tax;
+    document.getElementById('total').innerText = '$' + total;
 };
+
+// function getInput (ticket){
+//     const Input = document.getElementById(ticket +'-input');
+//     const Count = parseInt(Input.value);
+//     return Count;
+// };
+
+
+// function increaseDecrease2(isincrease){
+
+//     const Input = document.getElementById("ecoInput");
+//     const Count = parseInt(Input.value);
+//     let NewCount = 0;
+//     if( isincrease == true){
+//         NewCount = Count + 1;
+//     };
+//     if (isincrease == false && Count > 0){
+//         NewCount = Count - 1;
+//     };
+//     Input.value = NewCount;
+
+// };
 
 
 

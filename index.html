@@ -47,24 +47,24 @@
                     <label for="">Return</label>
                     <input class="inp-style" type="date" name="">
                 </div>
-            </div>
+           </div>
             <div class="input-group f-class">
                 <div>
                     <label for="">First Class ($150)</label>
-                    <input id="input" class="inp-style inp-width" type="number" value="0" name="">
+                    <input id="first-input" class="inp-style inp-width" type="number" value="0" name="">
                 </div>
                 <div class="plus-minus-btn">
-                    <p> <span id="increase">+</span> <span id="decrease">-</span> </p>
+                    <p> <span onclick="increaseDecrease('first', true)">+</span> <span onclick="increaseDecrease('first', false)">-</span> </p>
                 </div>
             </div>
             
             <div class="input-group f-class">
                 <div>
                     <label for="">Economy ($100)</label>
-                    <input id="ecoInput" class="inp-style inp-width" type="number" value="0" name="">
+                    <input id="eco-input" class="inp-style inp-width" type="number" value="0" name="">
                 </div>
                 <div class="plus-minus-btn">
-                    <p> <span id="ecoIncrease">+</span> <span id="ecoDecrease">-</span> </p>
+                    <p> <span onclick="increaseDecrease('eco',true)">+</span> <span onclick="increaseDecrease('eco',false)">-</span> </p>
                 </div>
             </div>
             <div class="calculations">
