@@ -3,7 +3,7 @@ function increaseDecrease(ticket, isincrease){
 
     const input = document.getElementById(ticket +'-input');
     const count = parseInt(input.value);
-    
+
     let newCount = 0;
     if( isincrease == true){
         newCount = count + 1;
@@ -34,6 +34,13 @@ function getInput(ticket){
     return Count;
 };
 
+// document.getElementById('bookButton').addEventListener('click',function(){
+
+
+// });
+function bookingConfirmation(){
+    document.getElementById('form').style.display = "none";
+};
 
 // function ticketPrice(){
 //     const input = document.getElementById('first-input');
