@@ -28,6 +28,7 @@
 
     <!--Booking Section-->
     <main class="main-content container">
+
         <div id="form" class="booking-form">
             <h3>Booking Flights</h3>
             <div class="input-group">
@@ -41,30 +42,38 @@
             <div class="inputs">
                 <div class="input-group">
                     <label" for="">Departure</label>
-                    <input class="inp-style" type="date" name="">
+                        <input class="inp-style" type="date" name="">
                 </div>
                 <div class="input-group">
                     <label for="">Return</label>
                     <input class="inp-style" type="date" name="">
                 </div>
-           </div>
+            </div>
             <div class="input-group f-class">
                 <div>
                     <label for="">First Class ($150)</label>
                     <input id="first-input" class="inp-style inp-width" type="number" value="0" name="">
                 </div>
-                <div class="plus-minus-btn">
-                    <p> <span onclick="increaseDecrease('first', true)">+</span> <span onclick="increaseDecrease('first', false)">-</span> </p>
+                <div class="plus-minus-btn-div">
+
+                    <button type="button" class="plus-minus-btn" onclick="increaseDecrease('first', true)">+</button>
+
+                    <button type="button" class="plus-minus-btn plus-minus-btn-neg" onclick="increaseDecrease('first', false)">-</button>
+
                 </div>
             </div>
-            
+
             <div class="input-group f-class">
                 <div>
                     <label for="">Economy ($100)</label>
                     <input id="eco-input" class="inp-style inp-width" type="number" value="0" name="">
                 </div>
-                <div class="plus-minus-btn">
-                    <p> <span onclick="increaseDecrease('eco',true)">+</span> <span onclick="increaseDecrease('eco',false)">-</span> </p>
+                <div class="plus-minus-btn-div">
+
+                    <button type="button" class="plus-minus-btn" onclick="increaseDecrease('eco',true)">+</button>
+
+                    <button type="button" class="plus-minus-btn" onclick="increaseDecrease('eco',false)">-</button>
+
                 </div>
             </div>
             <div class="calculations">
@@ -100,12 +109,15 @@
 
         <div class="booking-content">
             <h1>discover <br> around the world</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicingelit. Provident voluptatibus quam fuga laborumalias veniam libero autem quasi maxime ullam vero nama imi dolor, architecto ab facilis eaque deserunt nobise voluptatibus quam</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicingelit. Provident voluptatibus quam fuga laborumalias
+                veniam libero autem quasi maxime ullam vero nama imi dolor, architecto ab facilis eaque deserunt nobise
+                voluptatibus quam</p>
         </div>
-    </section>
 
-    <!--Thank You-->
-    <script src="script.js"></script>
+        </section>
+
+        <!--Thank You-->
+        <script src="script.js"></script>
 </body>
 
 </html>
